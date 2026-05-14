@@ -14,7 +14,20 @@ const server = http.createServer((request, response) => {
     response.writeHead(200,{'Content-Type':'application/json'}) //setting content type
     //response.write("welcome to our first server data"); //write some chunks of data
     response.end("{ name:'Tony Stark',appearence:'Avengers',year:'2300',}"); //signals that the response is complete
-  } else {
+  } 
+    //setting multiple headers
+    else if(request.url==='/headers'){
+      response.writeHead(200,{
+        'cache-control':'no-cache',
+        'x-content-type-options':'nosniff',
+        // 'content-encoding':'gzip',
+        'user-agent':'mozilla',
+        'accept':'application/json',
+        'referer':'google.com'
+      })
+      response.end("{ name:'Tony Stark',appearence:'Avengers',year:'2300',}")
+    }
+  else {
     response.statusCode = 404; //page not found
     response.end("page not found");
   }

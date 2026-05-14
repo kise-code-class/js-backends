@@ -1,5 +1,5 @@
 const http= require( 'http');
-const url=require('url');//we need this module fi us to parse query strings
+const url=require('url');//we need this module to help us to parse query strings
 
 const server=http.createServer((req, res) => {
     res.setHeader('content-type','text/html')//sets the header to handle html/text files

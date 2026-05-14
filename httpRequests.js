@@ -36,3 +36,24 @@ const port=8000;
  server.listen(port,()=>{
     console.log(`server running on:http://127.0.0.1:${port}`)
  })
+//  const http = require('http');
+
+// // Replace with the desired URL
+// const url = 'http://api.open-notify.org/astros.json';
+
+// http.get(url, (res) => {
+//   let data = '';
+
+//   // Listen for data chunks
+//   res.on('data', (chunk) => {
+//     data += chunk;
+//   });
+
+//   // The whole response has been received
+//   res.on('end', () => {
+//     console.log('Response:', JSON.parse(data));
+//   });
+
+// }).on('error', (err) => {
+//   console.log('Error:', err.message);
+// });
